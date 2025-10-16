@@ -3,7 +3,7 @@ const keyboardKeys = document.querySelectorAll('#keyboard .key');
 let turnplayer = 1;
 let focusedLetter = guessLetters[0];
 
-document.addEventListener('keydown', function(event) {
+function keyboardListener(event) {
   const validKeys = [
     'a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 
     'n', 'o', 'p', 'q', 'r', 's', 't', 'u', 'v', 'w', 'x', 'y', 'z'
@@ -30,6 +30,9 @@ document.addEventListener('keydown', function(event) {
         if(res.correct) {
           let focusedPlayer = document.getElementById(`p${turnplayer}`);
           focusedPlayer.style.animation = 'winjump 0.6s infinite';
+          document.removeEventListener('keydown', keyboardListener);
+          document.querySelector('.guess-container[enabled]').classList.add('winning');
+          document.getElementById('keyboard').classList.add('winning');
         }
         else {
           registerGuess(valid, res.result);
@@ -68,7 +71,9 @@ document.addEventListener('keydown', function(event) {
       document.getElementById(`p${turnplayer}l${next}`).click();
     }
   }
-});
+};
+
+document.addEventListener('keydown', keyboardListener);
 
 guessLetters.forEach(gl => {
   gl.addEventListener('click', function(event) {

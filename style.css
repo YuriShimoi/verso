@@ -25,7 +25,7 @@ html, body {
   content: '';
   background: white;
   border-radius: 2px;
-  transform: translate(-4vw, -1.8vw);
+  transform: translate(-4vw, -2vw);
   transform-origin: 0% -50%;
 }
 #versus::before {
@@ -71,6 +71,12 @@ html, body {
 .guess-container[enabled] {
   opacity: 1;
   pointer-events: all;
+  
+  transition: background ease 260ms;
+}
+
+.guess-container[enabled].winning {
+  background: #37b449;
 }
 
 .guesses {
@@ -129,7 +135,7 @@ html, body {
   background: #f0df4d;
 }
 .guesses .guess-list .guess-result .result-letter[effect='2'] {
-  background: #36d1b5;
+  background: #29c968;
 }
 
 .guesses .guess {
@@ -178,7 +184,7 @@ html, body {
   background: #f0df4d;
 }
 .guesses .guess .guess-letter[effect='2'] {
-  background: #36d1b5;
+  background: #29c968;
 }
 
 #keyboard {
@@ -194,6 +200,13 @@ html, body {
   padding: 12px;
   background: #3754b4;
   border-radius: 6px 6px 0 0;
+
+  transition: background ease 260ms;
+}
+
+#keyboard.winning {
+  pointer-events: none;
+  background: #37b449;
 }
 
 #keyboard .key-line {
@@ -233,7 +246,7 @@ html, body {
   background: #f0df4d;
 }
 #keyboard .key[effect='2'] {
-  background: #36d1b5;
+  background: #29c968;
 }
 
 #keyboard .key#enter {
