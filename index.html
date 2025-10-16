@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Verso</title>
+
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <div id="main">
+      <div id="container">
+        <div class="guess-container" enabled>
+          <div class="guesses">
+            <div class="guess-list" id="gl1"></div>
+            <div class="guess" id="p1">
+              <span id="p1l1" data-player="1" data-letter="1" class="guess-letter" active></span>
+              <span id="p1l2" data-player="1" data-letter="2" class="guess-letter"></span>
+              <span id="p1l3" data-player="1" data-letter="3" class="guess-letter"></span>
+              <span id="p1l4" data-player="1" data-letter="4" class="guess-letter"></span>
+              <span id="p1l5" data-player="1" data-letter="5" class="guess-letter"></span>
+            </div>
+          </div>
+        </div>
+        <div class="guess-container">
+          <div class="guesses">
+            <div class="guess-list" id="gl2"></div>
+            <div class="guess" id="p2">
+              <span id="p2l1" data-player="2" data-letter="1" class="guess-letter"></span>
+              <span id="p2l2" data-player="2" data-letter="2" class="guess-letter"></span>
+              <span id="p2l3" data-player="2" data-letter="3" class="guess-letter"></span>
+              <span id="p2l4" data-player="2" data-letter="4" class="guess-letter"></span>
+              <span id="p2l5" data-player="2" data-letter="5" class="guess-letter"></span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div id="keyboard">
+        <div class="key-line">
+          <span class="key" id="key-Q">Q</span>
+          <span class="key" id="key-W">W</span>
+          <span class="key" id="key-E">E</span>
+          <span class="key" id="key-R">R</span>
+          <span class="key" id="key-T">T</span>
+          <span class="key" id="key-Y">Y</span>
+          <span class="key" id="key-U">U</span>
+          <span class="key" id="key-I">I</span>
+          <span class="key" id="key-O">O</span>
+          <span class="key" id="key-P">P</span>
+        </div>
+        <div class="key-line">
+          <span class="key" id="key-A">A</span>
+          <span class="key" id="key-S">S</span>
+          <span class="key" id="key-D">D</span>
+          <span class="key" id="key-F">F</span>
+          <span class="key" id="key-G">G</span>
+          <span class="key" id="key-H">H</span>
+          <span class="key" id="key-J">J</span>
+          <span class="key" id="key-K">K</span>
+          <span class="key" id="key-L">L</span>
+        </div>
+        <div class="key-line">
+          <span class="key" id="key-Z">Z</span>
+          <span class="key" id="key-X">X</span>
+          <span class="key" id="key-C">C</span>
+          <span class="key" id="key-V">V</span>
+          <span class="key" id="key-B">B</span>
+          <span class="key" id="key-N">N</span>
+          <span class="key" id="key-M">M</span>
+          <span class="key" id="enter">ENTER</span>
+        </div>
+      </div>
+      <label id="versus"></label>
+    </div>
+
+    <script src="words.js"></script>
+    <script src="script.js" defer></script>
+  </body>
+</html>
