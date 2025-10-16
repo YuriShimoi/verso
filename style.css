@@ -92,7 +92,7 @@ html, body {
   top: 0;
   width: calc(25.7vw + 38px);
   min-width: 284px;
-  height: calc(50% - 80px);
+  height: calc(48% - 40px);
 
   display: flex;
   flex-direction: column;
@@ -114,7 +114,7 @@ html, body {
 
 .guesses .guess-list .guess-result .result-letter {
   display: flex;
-  align-items: flex-end;
+  align-items: center;
   justify-content: center;
 
   min-width: 20px;
